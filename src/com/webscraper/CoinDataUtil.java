@@ -20,57 +20,63 @@ public class CoinDataUtil {
 
         driver.get("https://finance.yahoo.com/cryptocurrencies?count=120");
 
-        System.out.println(driver.getTitle());
-
-        //Row
-
-        String xpathRow = "//*[@id=\"scr-res-table\"]/table/tbody/tr[*]";
-
-        List<WebElement> tableRows = driver.findElements(By.xpath(xpathRow));
-
         //Symbol
 
         String xpathSymbol = "//*[@id=\"scr-res-table\"]/table/tbody/tr[*]/td[1]";
+        
+        List<WebElement> symbol = new ArrayList<WebElement>();
 
-        List<WebElement> symbol = driver.findElements(By.xpath(xpathSymbol));
+        symbol = driver.findElements(By.xpath(xpathSymbol));
 
         //Name
 
         String xpathName = "//*[@id=\"scr-res-table\"]/table/tbody/tr[*]/td[2]";
+        
+        List<WebElement> name = new ArrayList<WebElement>();
 
-        List<WebElement> name = driver.findElements(By.xpath(xpathName));
+        name = driver.findElements(By.xpath(xpathName));
 
         //Price
 
         String xpathPrice = "//*[@id=\"scr-res-table\"]/table/tbody/tr[*]/td[3]";
+        
+        List<WebElement> price = new ArrayList<WebElement>();
 
-        List<WebElement> price = driver.findElements(By.xpath(xpathPrice));
+        price = driver.findElements(By.xpath(xpathPrice));
 
         //Percent Change
 
         String xpathPercentChange = "//*[@id=\"scr-res-table\"]/table/tbody/tr[*]/td[5]";
+        
+        List<WebElement> percentChange = new ArrayList<WebElement>();
 
-        List<WebElement> percentChange = driver.findElements(By.xpath(xpathPercentChange));
+        percentChange = driver.findElements(By.xpath(xpathPercentChange));
 
         //Market Cap
 
         String xpathMarketCap = "//*[@id=\"scr-res-table\"]/table/tbody/tr[*]/td[6]";
+        
+        List<WebElement> marketCap = new ArrayList<WebElement>();
 
-        List <WebElement> marketCap = driver.findElements(By.xpath(xpathMarketCap));
+        marketCap = driver.findElements(By.xpath(xpathMarketCap));
 
         //Volume in Currency(24hr)
 
         String xpathVolumeCurrency = "//*[@id=\"scr-res-table\"]/table/tbody/tr[*]/td[8]";
+        
+        List<WebElement> volumeCurrency = new ArrayList<WebElement>();
 
-        List <WebElement> volumeCurrency = driver.findElements(By.xpath(xpathVolumeCurrency));
+        volumeCurrency = driver.findElements(By.xpath(xpathVolumeCurrency));
 
         //Circulating Supply
 
         String xpathCirculatingSupply = "//*[@id=\"scr-res-table\"]/table/tbody/tr[*]/td[10]";
+        
+        List<WebElement> circulatingSupply = new ArrayList<WebElement>();
 
-        List<WebElement> circulatingSupply = driver.findElements(By.xpath(xpathCirculatingSupply));
+        circulatingSupply = driver.findElements(By.xpath(xpathCirculatingSupply));
 
-        int size = tableRows.size();
+        int size = symbol.size();
 
         for (int i = 0; i < size; i++) {
             coins.add(new Coin(symbol.get(i).getText(),
@@ -80,13 +86,6 @@ public class CoinDataUtil {
             			marketCap.get(i).getText(), 
             			volumeCurrency.get(i).getText(), 
             			circulatingSupply.get(i).getText()));
-            System.out.println((i + 1) + ": " + symbol.get(i).getText() +
-                    " - " + name.get(i).getText() +
-                    " - " + price.get(i).getText() +
-                    " - (" + percentChange.get(i).getText() + ")" +
-                    " - " + marketCap.get(i).getText() +
-                    " - " + volumeCurrency.get(i).getText() +
-                    " - " + circulatingSupply.get(i).getText() + "\n");
         }
         
         return coins;
