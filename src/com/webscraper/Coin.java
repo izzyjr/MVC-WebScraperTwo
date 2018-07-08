@@ -2,6 +2,7 @@ package com.webscraper;
 
 public class Coin {
 	
+	private int numberOrder;
 	private String symbol;
 	private String name;
 	private String price;
@@ -10,9 +11,10 @@ public class Coin {
 	private String volumeCurrency;
 	private String circulatingSupply;
 	
-	public Coin(String symbol, String name, String price, String percentChange, String marketCap, String volumeCurrency,
-			String circulatingSupply) {
+	public Coin(int numberOrder, String symbol, String name, String price, String percentChange, String marketCap,
+			String volumeCurrency, String circulatingSupply) {
 		super();
+		this.numberOrder = numberOrder;
 		this.symbol = symbol;
 		this.name = name;
 		this.price = price;
@@ -20,6 +22,14 @@ public class Coin {
 		this.marketCap = marketCap;
 		this.volumeCurrency = volumeCurrency;
 		this.circulatingSupply = circulatingSupply;
+	}
+
+	public int getNumberOrder() {
+		return numberOrder;
+	}
+
+	public void setNumberOrder(int numberOrder) {
+		this.numberOrder = numberOrder;
 	}
 
 	public String getSymbol() {

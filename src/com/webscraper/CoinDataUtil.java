@@ -79,7 +79,7 @@ public class CoinDataUtil {
         int size = symbol.size();
 
         for (int i = 0; i < size; i++) {
-            coins.add(new Coin(symbol.get(i).getText(),
+            coins.add(new Coin((i + 1), symbol.get(i).getText(),
             			name.get(i).getText(), 
             			price.get(i).getText(), 
             			percentChange.get(i).getText(), 

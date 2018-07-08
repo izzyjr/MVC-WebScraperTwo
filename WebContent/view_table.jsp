@@ -8,6 +8,7 @@
 	<table border="1">
 	
 		<tr>
+			<th>#</th>
 			<th>Symbol</th>
 			<th>Name</th>
 			<th>Price</th>
@@ -21,6 +22,7 @@
 		<c:forEach var="tempCoins" items="${coin_list}">
 				
 			<tr>
+				<td>${tempCoins.numberOrder}</td>
 				<td>${tempCoins.symbol}</td>
 				<td>${tempCoins.name}</td>
 				<td>${tempCoins.price}</td>
