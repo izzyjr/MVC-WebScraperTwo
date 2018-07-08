@@ -34,7 +34,7 @@ public class MvcServlet extends HttpServlet {
 		
 		request.setAttribute("coin_list", coins);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("view_coins.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("view_table.jsp");
 		
 		dispatcher.forward(request, response);
 	}

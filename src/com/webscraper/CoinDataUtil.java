@@ -80,6 +80,13 @@ public class CoinDataUtil {
             			marketCap.get(i).getText(), 
             			volumeCurrency.get(i).getText(), 
             			circulatingSupply.get(i).getText()));
+            System.out.println((i + 1) + ": " + symbol.get(i).getText() +
+                    " - " + name.get(i).getText() +
+                    " - " + price.get(i).getText() +
+                    " - (" + percentChange.get(i).getText() + ")" +
+                    " - " + marketCap.get(i).getText() +
+                    " - " + volumeCurrency.get(i).getText() +
+                    " - " + circulatingSupply.get(i).getText() + "\n");
         }
         
         return coins;

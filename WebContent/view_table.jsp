@@ -8,7 +8,13 @@
 	<table border="1">
 	
 		<tr>
-			<th>Coins</th>
+			<th>Symbol</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>% Change</th>
+			<th>Market Cap</th>
+			<th>Volume in Currency (24Hr)</th>
+			<th>Circulating Supply</th>
 		</tr>
 	
 
