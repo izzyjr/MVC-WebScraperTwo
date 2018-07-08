@@ -12,10 +12,16 @@
 		</tr>
 	
 
-		<c:forEach var="tempRows" items="${rows_info}">
+		<c:forEach var="tempCoins" items="${coin_list}">
 				
 			<tr>
-				<td>${tempRows.row}</td>
+				<td>${tempCoins.symbol}</td>
+				<td>${tempCoins.name}</td>
+				<td>${tempCoins.price}</td>
+				<td>${tempCoins.percentChange}</td>
+				<td>${tempCoins.marketCap}</td>
+				<td>${tempCoins.volumeCurrency}</td>
+				<td>${tempCoins.circulatingSupply}</td>
 			</tr>
 			
 		</c:forEach>
