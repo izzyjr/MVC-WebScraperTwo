@@ -2,7 +2,7 @@
 <html>
 
 <body>
-<h2>Coin Table Rows</h2>
+<h2>Cryptocurrencies</h2>
 <hr>
 <br/>
 	<table border="1">
