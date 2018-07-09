@@ -2,7 +2,7 @@
 <html>
 
 <body>
-<h2>Cryptocurrencies</h2>
+<h2>Cryptocurrencies - <%= new java.util.Date() %></h2>
 <hr>
 <br/>
 	<table border="1">
